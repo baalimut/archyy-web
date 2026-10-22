@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Archyy — Terms of Service</title>
+<meta name="description" content="Terms of Service for Archyy, a discovery-first iOS app for families in Israel to find and manage children's after-school activities, classes, lessons, camps, and outings.">
+<style>
+  :root{
+    --accent:#DD3B6B;
+    --accent-dark:#C42A58;
+    --ink:#1a1a1a;
+    --muted:#5c5c62;
+    --line:#e7e7ea;
+    --banner-bg:#f6f4f2;
+    --banner-line:#e4ded7;
+    --banner-ink:#4a4742;
+    --box-bg:#fbfafa;
+    --maxw:760px;
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0;
+    background:#ffffff;
+    color:var(--ink);
+    font-family:Georgia,"Iowan Old Style","Palatino Linotype","Times New Roman",serif;
+    font-size:18px;
+    line-height:1.75;
+    padding:0 20px;
+  }
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:26px 0 80px;}
+  .sans{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;}
+
+  a{color:var(--accent-dark);}
+  a:hover{color:var(--accent);}
+
+  /* Review notice banner */
+  .notice{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background:var(--banner-bg);
+    border:1px solid var(--banner-line);
+    border-left:4px solid var(--accent);
+    border-radius:10px;
+    padding:16px 18px;
+    margin:14px 0 4px;
+    font-size:14.5px;
+    line-height:1.62;
+    color:var(--banner-ink);
+  }
+  .notice .notice-title{
+    display:block;font-weight:700;color:#3a3732;margin-bottom:6px;
+    font-size:12.5px;letter-spacing:.07em;text-transform:uppercase;
+  }
+  .notice p{margin:8px 0 0;}
+  .notice code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    background:#efe9e3;border-radius:4px;padding:1px 5px;font-size:12.5px;color:#3a3732;
+  }
+
+  /* Header */
+  header.doc{text-align:center;padding:30px 0 20px;border-bottom:1px solid var(--line);margin-bottom:6px;}
+  .wordmark{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-weight:800;font-size:30px;color:var(--accent);letter-spacing:-.6px;line-height:1;
+  }
+  .doc-title{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-weight:600;font-size:21px;margin:14px 0 6px;color:var(--ink);letter-spacing:-.2px;
+  }
+  .updated{color:var(--muted);font-size:13.5px;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;margin:0;}
+  .crosslink{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:14px;margin-top:12px;}
+
+  .lead{font-size:18px;color:#2a2a2e;margin:22px 0;}
+
+  /* Table of contents */
+  nav.toc{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background:var(--box-bg);border:1px solid var(--line);border-radius:12px;
+    padding:18px 22px;margin:26px 0 10px;font-size:14.5px;
+  }
+  nav.toc h2{font-size:12.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);margin:0 0 10px;border:0;padding:0;}
+  nav.toc ol{margin:0;padding:0;list-style:none;columns:2;column-gap:28px;}
+  nav.toc li{margin:0 0 7px;line-height:1.4;break-inside:avoid;}
+  nav.toc a{text-decoration:none;color:var(--accent-dark);}
+  nav.toc a:hover{text-decoration:underline;}
+  nav.toc .n{color:var(--muted);font-variant-numeric:tabular-nums;}
+
+  /* Sections */
+  section{margin:30px 0;}
+  h2.sec{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-size:19px;font-weight:700;color:var(--ink);letter-spacing:-.2px;
+    margin:36px 0 10px;padding-top:8px;scroll-margin-top:16px;
+  }
+  h2.sec .num{color:var(--accent);margin-right:10px;font-variant-numeric:tabular-nums;}
+  h3.sub{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-size:15.5px;font-weight:700;margin:20px 0 6px;color:#2a2a2e;
+  }
+  p{margin:12px 0;}
+  ul{margin:12px 0;padding-left:22px;}
+  li{margin:7px 0;}
+  strong{color:#111;}
+
+  .footer{
+    margin-top:52px;padding-top:22px;border-top:1px solid var(--line);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-size:14px;color:var(--muted);
+  }
+  .footer .contact{color:var(--ink);}
+  .ph{background:#fdf2f6;border-bottom:1px dashed var(--accent);padding:0 3px;border-radius:2px;white-space:nowrap;}
+
+  @media (max-width:560px){
+    body{font-size:17px;padding:0 16px;}
+    nav.toc ol{columns:1;}
+    .wordmark{font-size:27px;}
+    .doc-title{font-size:19px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- REVIEW NOTICE BANNER -->
+  <div class="notice" role="note" aria-label="Template review notice">
+    <span class="notice-title">Template for review — not legal advice</span>
+    <p>This document is a good-faith template prepared to help get the Archyy app launch-ready. It is <strong>not legal advice</strong> and may not address every requirement that applies to you. Please have a qualified lawyer review it before you rely on it in production — in particular its handling of <strong>children's personal data</strong> under Israel's Privacy Protection Law, 5741-1981, and, if Archyy is offered to users in the EU or the United States, under <strong>GDPR / GDPR-K</strong> (Article 8) and the U.S. <strong>Children's Online Privacy Protection Act (COPPA)</strong>.</p>
+    <p>Before publishing, complete every placeholder shown in brackets — the operating company's legal name <code>[LEGAL ENTITY NAME]</code> and its <code>[REGISTERED ADDRESS]</code>. Also confirm the governing-language and jurisdiction choices in Sections 14 and 16.</p>
+  </div>
+
+  <!-- HEADER -->
+  <header class="doc">
+    <div class="wordmark">Archyy</div>
+    <h1 class="doc-title">Terms of Service</h1>
+    <p class="updated">Last updated: 18 October 2026</p>
+    <p class="crosslink">See also our <a href="privacy.html">Privacy Policy</a></p>
+  </header>
+
+  <p class="lead">Welcome to Archyy. These Terms of Service (the &ldquo;<strong>Terms</strong>&rdquo;) are a binding agreement between you and <span class="ph">[LEGAL ENTITY NAME]</span>, a company registered in Israel with its registered office at <span class="ph">[REGISTERED ADDRESS]</span> (&ldquo;<strong>Archyy</strong>,&rdquo; &ldquo;<strong>we</strong>,&rdquo; &ldquo;<strong>us</strong>,&rdquo; or &ldquo;<strong>our</strong>&rdquo;). They govern your use of the Archyy mobile application and related services (the &ldquo;<strong>Service</strong>&rdquo;). Please read them carefully. Our <a href="privacy.html">Privacy Policy</a> explains how we handle personal data and forms part of these Terms.</p>
+
+  <!-- TOC -->
+  <nav class="toc" aria-label="Contents">
+    <h2>Contents</h2>
+    <ol>
+      <li><span class="n">1.</span> <a href="#acceptance">Acceptance of These Terms</a></li>
+      <li><span class="n">2.</span> <a href="#eligibility">Eligibility: Who May Use Archyy</a></li>
+      <li><span class="n">3.</span> <a href="#what-is-archyy">What Archyy Is: A Discovery-First Service</a></li>
+      <li><span class="n">4.</span> <a href="#accounts">Accounts &amp; Sign-In</a></li>
+      <li><span class="n">5.</span> <a href="#family-profile">Your Family Profile &amp; Children's Information</a></li>
+      <li><span class="n">6.</span> <a href="#acceptable-use">Acceptable Use</a></li>
+      <li><span class="n">7.</span> <a href="#providers">Third-Party Providers, Bookings &amp; Payments</a></li>
+      <li><span class="n">8.</span> <a href="#ip">Intellectual Property</a></li>
+      <li><span class="n">9.</span> <a href="#service-changes">Changes to the Service</a></li>
+      <li><span class="n">10.</span> <a href="#disclaimers">Disclaimers</a></li>
+      <li><span class="n">11.</span> <a href="#liability">Limitation of Liability</a></li>
+      <li><span class="n">12.</span> <a href="#indemnity">Indemnity</a></li>
+      <li><span class="n">13.</span> <a href="#termination">Termination</a></li>
+      <li><span class="n">14.</span> <a href="#governing-law">Governing Law &amp; Dispute Resolution</a></li>
+      <li><span class="n">15.</span> <a href="#terms-changes">Changes to These Terms</a></li>
+      <li><span class="n">16.</span> <a href="#general">General</a></li>
+      <li><span class="n">17.</span> <a href="#contact">Contact Us</a></li>
+    </ol>
+  </nav>
+
+  <!-- SECTIONS -->
+  <section id="acceptance">
+    <h2 class="sec"><span class="num">1.</span>Acceptance of These Terms</h2>
+    <p>By downloading, accessing, or using Archyy, or by creating an account, you agree to these Terms and to our <a href="privacy.html">Privacy Policy</a>. If you do not agree, please do not use the Service. If you use Archyy on behalf of your household or family, you accept these Terms for yourself and confirm that you are authorized to act for your family.</p>
+  </section>
+
+  <section id="eligibility">
+    <h2 class="sec"><span class="num">2.</span>Eligibility: Who May Use Archyy</h2>
+    <p>Archyy is for adults. You may use the Service only if you are <strong>at least 18 years old</strong> and are the <strong>parent or legal guardian</strong> of the child or children you add to your family profile. By using Archyy, you represent and warrant that you meet these requirements and that the information you provide is accurate and kept up to date. <strong>Children may not create or use Archyy accounts.</strong> The Service is directed to families in Israel; if you use it from elsewhere, you are responsible for complying with your local laws.</p>
+  </section>
+
+  <section id="what-is-archyy">
+    <h2 class="sec"><span class="num">3.</span>What Archyy Is: A Discovery-First Service</h2>
+    <p>Archyy helps you discover, compare, and keep track of children's after-school activities, classes, private lessons, camps (קייטנות), and family outings, and manage them in one place. Archyy is <strong>discovery-first</strong>: we provide information, search, matching, and pointers to activities, and we link you out to the relevant provider to make a booking or payment.</p>
+    <p>We are <strong>not</strong> the organizer, operator, or provider of the activities listed. Listings are provided for your convenience. Availability, schedules, prices, eligibility, age and grade ranges, and other details are set and kept current by the providers at their own sources, and may change or be out of date. <strong>Always confirm the details with the provider before you rely on them.</strong></p>
+  </section>
+
+  <section id="accounts">
+    <h2 class="sec"><span class="num">4.</span>Accounts &amp; Sign-In</h2>
+    <p>To use most features, you create an account and a family profile. Archyy uses Supabase for authentication; you can sign in with <strong>Apple</strong>, with <strong>Google</strong>, or with a passwordless &ldquo;<strong>magic link</strong>&rdquo; emailed to you. You are responsible for keeping your sign-in method and your device secure, and for all activity under your account. Please tell us promptly at <a href="mailto:hello@archyy.com">hello@archyy.com</a> if you suspect any unauthorized use.</p>
+    <p>You are responsible for the accuracy of the information in your profile, including your children's details and any second parent/guardian or emergency-contact details you add. By adding another person's details, you confirm you are entitled to provide them.</p>
+  </section>
+
+  <section id="family-profile">
+    <h2 class="sec"><span class="num">5.</span>Your Family Profile &amp; Children's Information</h2>
+    <p>You choose what to add to your family profile. Because you add information about your children and, optionally, about other people, you confirm that you are the parent or legal guardian of each child, or are otherwise entitled to provide that person's information, and you consent to our handling it as described in the <a href="privacy.html">Privacy Policy</a>.</p>
+    <p>You can view, correct, or delete this information in the app at any time. How we collect, use, and protect children's data — and your rights as a parent or guardian — are explained in the <a href="privacy.html#childrens-data">Children's Personal Data</a> section of the Privacy Policy.</p>
+  </section>
+
+  <section id="acceptable-use">
+    <h2 class="sec"><span class="num">6.</span>Acceptable Use</h2>
+    <p>You agree to use Archyy only for lawful, personal, family purposes, and <strong>not</strong> to:</p>
+    <ul>
+      <li>break any law or infringe anyone's rights;</li>
+      <li>provide false or misleading information, or someone else's information you have no right to share;</li>
+      <li>access, scrape, copy, or harvest the Service or its listings by automated means, or for any commercial purpose, without our written permission;</li>
+      <li>interfere with, disrupt, or overload the Service, or try to gain unauthorized access to it, its systems, or other users' accounts;</li>
+      <li>reverse-engineer, decompile, or attempt to extract source code, except where the law expressly allows;</li>
+      <li>upload or transmit anything harmful (such as malware), or use the Service to harass, abuse, or harm others;</li>
+      <li>remove or obscure any proprietary notices, or use our branding without permission.</li>
+    </ul>
+    <p>We may suspend, limit, or terminate access if we reasonably believe you have broken these rules.</p>
+  </section>
+
+  <section id="providers">
+    <h2 class="sec"><span class="num">7.</span>Third-Party Activity Providers, Bookings &amp; Payments</h2>
+    <p>Archyy links you to third-party activity providers, venues, municipalities, and ticketing or booking platforms (each a &ldquo;<strong>Provider</strong>&rdquo;). <strong>Any booking, enrollment, registration, ticket, or payment happens on the Provider's own platform, under the Provider's terms and privacy policy, directly between you and that Provider.</strong></p>
+    <p>Archyy is <strong>not a party</strong> to those transactions and <strong>does not process your payment-card details</strong>. We do not guarantee the availability, quality, safety, legality, pricing, or accuracy of any activity, listing, or Provider, and we are not responsible for a Provider's acts or omissions — including cancellations, refunds, no-shows, schedule or price changes, injuries, or the conduct of their staff. Any dispute about a booking, payment, refund, or the activity itself is between you and the Provider. We encourage you to review each Provider's terms, cancellation and refund policies, and safety information before you book.</p>
+  </section>
+
+  <section id="ip">
+    <h2 class="sec"><span class="num">8.</span>Intellectual Property</h2>
+    <p>The Archyy app, the &ldquo;Archyy&rdquo; name and logo, and the design, text, graphics, software, and the compilation and arrangement of listings are owned by the Company or its licensors and are protected by intellectual-property laws. We grant you a limited, personal, non-exclusive, non-transferable, revocable license to use the Service for your own family's non-commercial use, subject to these Terms.</p>
+    <p>You may not copy, modify, distribute, sell, or create derivative works from any part of the Service except as these Terms or the law expressly allow. Activity information and third-party names and marks belong to their respective owners and are shown for discovery purposes only.</p>
+  </section>
+
+  <section id="service-changes">
+    <h2 class="sec"><span class="num">9.</span>Changes to the Service</h2>
+    <p>We are actively building Archyy. We may add, change, suspend, or remove features, listings, or the whole Service at any time, with or without notice. We will try to give reasonable notice of significant changes where we can, but we are not liable to you for any change to, or discontinuation of, the Service.</p>
+  </section>
+
+  <section id="disclaimers">
+    <h2 class="sec"><span class="num">10.</span>Disclaimers</h2>
+    <p>The Service is provided &ldquo;<strong>as is</strong>&rdquo; and &ldquo;<strong>as available</strong>,&rdquo; without warranties of any kind, whether express or implied, including implied warranties of merchantability, fitness for a particular purpose, and non-infringement, and any warranty that the Service will be uninterrupted, timely, secure, or error-free, or that any listing is accurate, complete, or current. You use the Service, and rely on any listing, at your own discretion and risk.</p>
+    <p>Nothing in these Terms excludes or limits any warranty, right, or liability that cannot be excluded or limited under applicable law, including Israel's consumer-protection laws.</p>
+  </section>
+
+  <section id="liability">
+    <h2 class="sec"><span class="num">11.</span>Limitation of Liability</h2>
+    <p>To the fullest extent permitted by law, the Company and its officers, employees, and partners will not be liable for any indirect, incidental, special, consequential, or punitive damages, or for any loss of data, goodwill, or profits, arising out of or relating to your use of (or inability to use) the Service, any listing, or any Provider or activity — even if we have been advised that such damages were possible.</p>
+    <p>To the fullest extent permitted by law, our total aggregate liability for all claims relating to the Service is limited to the greater of (a) the amount you paid us, if any, for the Service in the 12 months before the claim arose, or (b) ILS 200. Because Archyy is discovery-first and takes no payment for bookings, we are not responsible for any amounts you pay to Providers. Some jurisdictions do not allow certain of these limitations, so some may not apply to you.</p>
+  </section>
+
+  <section id="indemnity">
+    <h2 class="sec"><span class="num">12.</span>Indemnity</h2>
+    <p>To the extent permitted by law, you agree to indemnify and hold harmless the Company and its officers, employees, and partners from any claim, demand, loss, liability, or expense (including reasonable legal fees) arising out of your use of the Service, your violation of these Terms or any law, your infringement of anyone's rights, or any information you provided — including other people's details that you were not entitled to share.</p>
+  </section>
+
+  <section id="termination">
+    <h2 class="sec"><span class="num">13.</span>Termination</h2>
+    <p>You can stop using Archyy and delete your account at any time from within the app or by emailing <a href="mailto:hello@archyy.com">hello@archyy.com</a>. We may suspend or terminate your access if you breach these Terms, if required by law, or if we discontinue the Service. On termination, the license granted in Section 8 ends. Sections that by their nature should survive — including intellectual property, disclaimers, limitation of liability, indemnity, and governing law — will survive. Deleting your account triggers deletion of your personal data as described in the <a href="privacy.html#retention">Privacy Policy</a>.</p>
+  </section>
+
+  <section id="governing-law">
+    <h2 class="sec"><span class="num">14.</span>Governing Law &amp; Dispute Resolution</h2>
+    <p>These Terms, and any dispute arising out of or relating to them or the Service, are governed by the laws of the <strong>State of Israel</strong>, without regard to its conflict-of-laws rules. The competent courts of the <strong>Tel Aviv–Jaffa District</strong> shall have exclusive jurisdiction, and you and we submit to that jurisdiction — except that nothing here removes any mandatory right you may have to bring proceedings in your place of residence under applicable consumer-protection law.</p>
+    <p>Before starting any formal proceeding, we encourage you to contact us at <a href="mailto:hello@archyy.com">hello@archyy.com</a> so we can try to resolve the matter informally.</p>
+  </section>
+
+  <section id="terms-changes">
+    <h2 class="sec"><span class="num">15.</span>Changes to These Terms</h2>
+    <p>We may update these Terms from time to time. When we make material changes, we will update the &ldquo;Last updated&rdquo; date above and, where appropriate, notify you in the app or by email. Changes take effect when posted. Your continued use of Archyy after that means you accept the updated Terms. If you do not agree, please stop using the Service and delete your account.</p>
+  </section>
+
+  <section id="general">
+    <h2 class="sec"><span class="num">16.</span>General</h2>
+    <p>These Terms and the <a href="privacy.html">Privacy Policy</a> are the entire agreement between you and the Company regarding the Service and replace any earlier understandings. If any provision is found unenforceable, the rest remains in effect and the unenforceable part is limited to the minimum extent necessary. Our failure to enforce a provision is not a waiver of it. You may not assign these Terms without our consent; we may assign them to an affiliate or a successor. We may provide these Terms in both Hebrew and English; if there is a conflict between versions, the version we designate as governing will prevail, and absent a designation the Hebrew version will prevail for users in Israel.</p>
+  </section>
+
+  <section id="contact">
+    <h2 class="sec"><span class="num">17.</span>Contact Us</h2>
+    <p>Questions about these Terms? Contact:</p>
+    <p class="contact">
+      <strong>Archyy</strong> — operated by <span class="ph">[LEGAL ENTITY NAME]</span><br>
+      <span class="ph">[REGISTERED ADDRESS]</span><br>
+      Email: <a href="mailto:hello@archyy.com">hello@archyy.com</a>
+    </p>
+  </section>
+
+  <div class="footer">
+    <p>Archyy is operated by <span class="ph">[LEGAL ENTITY NAME]</span>. &nbsp;·&nbsp; <a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="mailto:hello@archyy.com">hello@archyy.com</a></p>
+    <p>&copy; 2026 <span class="ph">[LEGAL ENTITY NAME]</span>. All rights reserved.</p>
+  </div>
+
+</div>
+</body>
+</html>

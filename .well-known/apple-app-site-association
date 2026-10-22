@@ -1,0 +1,12 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["2H52AG4MUK.app.kinder.mobile"],
+        "components": [
+          { "/": "/join*", "comment": "Co-guardian invite — opens the Archyy app straight to the join step." }
+        ]
+      }
+    ]
+  }
+}
