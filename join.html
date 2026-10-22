@@ -60,6 +60,9 @@
   }
   .btn:active{transform:scale(.985)}
   .btn:hover{filter:brightness(1.03)}
+  .btn + .btn{margin-top:10px}
+  .btn-ghost{background:transparent; color:var(--brand-ink); border:1.5px solid var(--hair); font-weight:600}
+  .note{font-size:14px; line-height:1.5; color:var(--brand-ink); background:var(--code-bg); border:1px solid var(--hair); border-radius:12px; padding:12px 14px; margin:12px 0 0; text-align:left}
   .copy{
     margin-top:10px; background:transparent; color:var(--brand-ink); border:0; cursor:pointer;
     font:inherit; font-weight:600; font-size:14.5px; padding:8px;
@@ -86,10 +89,12 @@
       <p class="code" id="code">— — — —</p>
     </div>
 
-    <a class="btn" id="openBtn" href="#">Open in Archyy</a>
+    <a class="btn" id="getBtn" href="#">Get the app &amp; join</a>
+    <a class="btn btn-ghost" id="openBtn" href="#">I already have Archyy</a>
     <button class="copy" id="copyBtn" type="button">Copy code</button>
+    <p class="note" id="note" hidden></p>
 
-    <p class="hint" id="hint">Already have Archyy? Tap <b>Open in Archyy</b> and you'll land straight on the family — no setup. New here? Install the app, then <b>tap this link again</b> (or open the app and enter the code above). Either way, you skip onboarding and go right to joining.</p>
+    <p class="hint" id="hint">Tap <b>Get the app &amp; join</b> — once you install and open Archyy, your invite applies automatically and you land straight on the family. No code to type, no setup. (Already have the app? Tap <b>I already have Archyy</b>.)</p>
 
     <footer>
       <a href="/privacy.html">Privacy</a> &nbsp;·&nbsp; <a href="/terms.html">Terms</a> &nbsp;·&nbsp; hello@archyy.com
@@ -111,30 +116,59 @@
     var openBtn = document.getElementById('openBtn');
     var copyBtn = document.getElementById('copyBtn');
 
+    var getBtn = document.getElementById('getBtn');
+    var note = document.getElementById('note');
+    // ↓↓ Paste the App Store link here once Archyy is published. Until then, "Get the app & join" still
+    //    copies the invite to the clipboard, so the deferred hand-off is already in place and testable.
+    var APP_STORE_URL = '';
+    // The FULL invite URL is what we hand off via the clipboard: the freshly-installed app reads it on
+    // first launch and joins automatically (deferred deep link). The bare code stays for manual entry.
+    var inviteUrl = code ? (location.origin + '/join?code=' + encodeURIComponent(code)) : '';
+
+    function copyText(text, onDone) {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(onDone, onDone); return;
+      }
+      try {
+        var r = document.createRange(); r.selectNodeContents(codeEl);
+        var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+        document.execCommand('copy');
+      } catch (e) {}
+      onDone();
+    }
+
     if (code) {
       codeEl.textContent = code;
-      // Deep-link straight into the app's join step via the custom scheme (works even if the
-      // Universal Link didn't fire, e.g. the page was reached from a long-press "open link").
+      // Existing-app users: open straight into the join step via the custom scheme.
       openBtn.setAttribute('href', 'kinder://join?code=' + encodeURIComponent(code));
     } else {
       document.getElementById('title').textContent = 'Join a family on Archyy';
       codeEl.textContent = 'No code in this link';
       openBtn.setAttribute('href', 'kinder://join');
       copyBtn.style.display = 'none';
+      getBtn.style.display = 'none';
       document.getElementById('hint').textContent = 'This invite link is missing its code. Ask whoever invited you to resend it, or open the Archyy app and enter the code by hand.';
     }
 
+    // PRIMARY (new co-guardian, no app): stash the invite on the clipboard, then head to the App Store.
+    // On first launch the freshly-installed app reads the clipboard and joins automatically.
+    getBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+      if (!inviteUrl) return;
+      copyText(inviteUrl, function () {
+        if (APP_STORE_URL) { window.location.href = APP_STORE_URL; }
+        else { note.hidden = false; note.textContent = 'Your invite is saved to this device. Archyy hits the App Store soon — install it, open it, and you’ll go straight to joining.'; }
+      });
+    });
+
+    // Also prime the clipboard when an existing user taps Open, so a later install still picks it up.
+    openBtn.addEventListener('click', function () { if (inviteUrl) copyText(inviteUrl, function () {}); });
+
     copyBtn.addEventListener('click', function () {
       if (!code) return;
-      var done = function () { copyBtn.textContent = 'Copied ✓'; setTimeout(function(){ copyBtn.textContent = 'Copy code'; }, 1600); };
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(code).then(done).catch(function(){ fallback(); });
-      } else { fallback(); }
-      function fallback(){
-        var r = document.createRange(); r.selectNodeContents(codeEl);
-        var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
-        try { document.execCommand('copy'); done(); } catch (e) {}
-      }
+      copyText(code, function () {
+        copyBtn.textContent = 'Copied ✓'; setTimeout(function () { copyBtn.textContent = 'Copy code'; }, 1600);
+      });
     });
   })();
 </script>
